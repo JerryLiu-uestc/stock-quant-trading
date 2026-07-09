@@ -1,0 +1,4 @@
+pandas>=1.5.0
+matplotlib>=3.5.0
+tushare>=1.2.89
+PyQt5>=5.15.0
