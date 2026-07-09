@@ -6,3 +6,12 @@ __pycache__/
 venv/
 raw/
 .gitignore
+
+# 排除打包生成的垃圾文件
+dist/
+build/
+*.exe
+*.spec
+*.pyd
+*.pyc
+__pycache__/
