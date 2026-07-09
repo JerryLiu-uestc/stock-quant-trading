@@ -203,10 +203,13 @@ class StockVisualizationApp(QMainWindow):
 
     def load_stock_list(self):
         """加载股票列表"""
-        data_dir = os.path.join(os.path.dirname(__file__), 'data')
+        # 数据目录在项目根目录的data文件夹
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)  # 上一级目录
+        data_dir = os.path.join(project_root, 'data')
 
         if not os.path.exists(data_dir):
-            self.log_message("⚠️ 数据目录不存在")
+            self.log_message(f"⚠️ 数据目录不存在: {data_dir}")
             return
 
         self.stock_list = []
